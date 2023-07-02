@@ -1,0 +1,136 @@
+body:not([class]) > h1#header,
+body:not([class]) > #parentDirLinkBox,
+body:not([class]) > #parentDirLinkBox + table {
+    font-family: 'system-ui', sans-serif;
+    --google-drive-link-color: #5f6368;
+    --google-drive-border-color: #bdbdbd;
+}
+@media (prefers-color-scheme: dark) {
+    body:not([class]) > h1#header, body:not([class]) > #parentDirLinkBox,
+    body:not([class]) > #parentDirLinkBox + table {
+        --google-drive-link-color: #e0e0e0;
+        --google-drive-border-color: #424242;
+    }
+}
+
+body:not([class]) > h1#header a,
+body:not([class]) > #parentDirLinkBox a,
+body:not([class]) > #parentDirLinkBox + table a {
+    color: var(--google-drive-link-color);
+}
+
+
+body:not([class]) > h1#header a.icon,
+body:not([class]) > #parentDirLinkBox a.icon,
+body:not([class]) > #parentDirLinkBox + table a.icon {
+    background-image: none !important;
+    position: relative;
+}
+body:not([class]) > #parentDirLinkBox a.icon {
+    padding-left: 2.5em;
+}
+body:not([class]) > #parentDirLinkBox + table a.icon {
+    padding-left: 3.5em;
+}
+
+
+
+body:not([class]) > h1#header a.icon:before,
+body:not([class]) > #parentDirLinkBox a.icon:before,
+body:not([class]) > #parentDirLinkBox + table a.icon:before {
+    background-color: currentColor;
+    content: '';
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    font-weight: normal;
+    left: calc(1em - 12px + (8px / 2));
+    line-height: 1em;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    position: absolute;
+    top: calc(-4px / 2);
+}
+
+body:not([class]) > #parentDirLinkBox a.icon.up:before {
+    --mask-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Ctitle%3Echevron-left%3C/title%3E%3Cpath d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" /%3E%3C/svg%3E');
+    -webkit-mask-image: var(--mask-image);
+    mask-image: var(--mask-image);
+}
+
+body:not([class]) > #parentDirLinkBox + table a.icon.dir:before {
+    --mask-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Ctitle%3Efolder%3C/title%3E%3Cpath d="M10,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V8C22,6.89 21.1,6 20,6H12L10,4Z" /%3E%3C/svg%3E');
+    -webkit-mask-image: var(--mask-image);
+    mask-image: var(--mask-image);
+}
+
+body:not([class]) > #parentDirLinkBox + table a.icon.file:before {
+    --mask-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Cpath d="M13,9V3.5L18.5,9M6,2C4.89,2 4,2.89 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2H6Z"%3E%3C/path%3E%3C/svg%3E');
+    -webkit-mask-image: var(--mask-image);
+    mask-image: var(--mask-image);
+}
+
+body:not([class]) > h1#header {
+    border-bottom: 1px solid var(--google-drive-border-color);
+}
+
+body:not([class]) > h1#header {
+    font-size: calc(5em / 3);
+    line-height: 1.25em;
+}
+
+
+body:not([class]) > #parentDirLinkBox #parentDirLink {
+    font-weight: 500;
+}
+
+body:not([class]) > #parentDirLinkBox {
+    padding-top: 0.6em;
+}
+
+body:not([class]) > #parentDirLinkBox,
+body:not([class]) > #parentDirLinkBox + table {
+    font-size: 14px;
+    line-height: 2em;
+}
+
+body:not([class]) > #parentDirLinkBox + table {
+    width: 100%;
+    max-width: 100vw;
+}
+
+body:not([class]) > #parentDirLinkBox + table th {
+    font-weight: 500;
+    text-align: left;
+}
+
+body:not([class]) > #parentDirLinkBox + table th,
+body:not([class]) > #parentDirLinkBox + table td {
+    padding: 1em 0.8em;
+}
+
+body:not([class]) > #parentDirLinkBox + table tbody tr {
+    border-top: 1px solid var(--google-drive-border-color);
+}
+
+body:not([class]) > #parentDirLinkBox + table tbody tr:last-child {
+    border-bottom: 1px solid var(--google-drive-border-color);
+}
+
+body:not([class]) > #parentDirLinkBox + table td.detailsColumn {
+    padding: 0.4em;
+    text-align: left;
+}
+
+body:not([class]) > #parentDirLinkBox + table tbody td[data-value] {
+    max-width: calc(100vw - 250px);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+body:not([class]) > #parentDirLinkBox + table tbody td[data-value] a {
+    font-weight: 500;
+}

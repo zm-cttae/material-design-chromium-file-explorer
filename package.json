@@ -1,0 +1,10 @@
+{
+    "main": "./index.css",
+    "scripts": {
+        "test": "stylelint ."
+    },
+    "devDependencies": {
+        "stylelint": "^15.9.0",
+        "stylelint-config-standard": "^33.0.0"
+    }
+}
